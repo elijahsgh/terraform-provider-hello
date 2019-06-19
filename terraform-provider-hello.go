@@ -22,6 +22,7 @@ func dataSourceHello() *schema.Resource {
 }
 
 func dataSourceHelloRead(d *schema.ResourceData, meta interface{}) error {
+        d.SetId("hello")
 	d.Set("message", "Hello world")
 	return nil
 }
