@@ -8,7 +8,8 @@ import (
 func Provider() terraform.ResourceProvider {
 	return &schema.Provider{
 		Schema: map[string]*schema.Schema{},
-		ResourcesMap: map[string]*schema.Resource{
+//		ResourcesMap: map[string]*schema.Resource{
+		DataSourcesMap: map[string]*schema.Resource{
 			"hello": dataSourceHello(),
 		},
 	}

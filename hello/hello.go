@@ -18,12 +18,6 @@ func dataSourceHello() *schema.Resource {
 	}
 }
 
-/*
-func dataSourceHelloDelete(d *schema.ResourceData, meta interface{}) error {
-	return nil
-}
-*/
-
 func dataSourceHelloRead(d *schema.ResourceData, meta interface{}) error {
 	d.SetId("hello-world")
 	d.Set("message", "Hello world")
