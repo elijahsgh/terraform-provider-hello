@@ -7,16 +7,15 @@ import (
 )
 
 func dataSourceHello() *schema.Resource {
-	return &schema.Resource {
+	return &schema.Resource{
 		Read: dataSourceHelloRead,
 		Schema: map[string]*schema.Schema{
 			"message": {
-				Type: schema.TypeString,
-				Elem: &schema.Schema{Type: schema.TypeString},
+				Type:     schema.TypeString,
+				Elem:     &schema.Schema{Type: schema.TypeString},
 				Optional: true,
 				Computed: true,
 			},
-
 		},
 	}
 }
