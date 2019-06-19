@@ -14,7 +14,7 @@ func TestAccResourceHello(t *testing.T) {
       {
         Config: testAccResourceHelloConfig,
         Check: resource.ComposeTestCheckFunc(
-          resource.TestCheckResourceAttr("hello.world", "message", "hello, world"),
+          resource.TestCheckResourceAttr("data.hello.world", "message", "Hello world"),
         ),
       },
     },
